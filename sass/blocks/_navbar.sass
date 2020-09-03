@@ -1,0 +1,98 @@
+.navbar
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  background: #ffffff
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &_mobile, &_landline
+    text-align: right
+  &_phone
+    display: block
+    margin-bottom: 5px
+    font-size: 19px
+    +bold
+    text-decoration: none
+    color: $text-color
+  &__small-text
+    display: block
+    font-size: 14px
+    color: $text-color-light
+    text-decoration: none
+
+.menu
+  position: fixed
+  z-index: 0
+  top: 80px
+  left: 0
+  width: 100%
+  padding: 16px 0
+  background-color: $primary
+  color: #ffffff
+  transition: 0.2s
+  transform: translateY(-200%)
+  opacity: 1
+  &_active
+    transform: translateY(0)
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__link
+    text-decoration: none
+    font-size: 17px
+    text-transform: uppercase
+    color: #ffffff
+  &-button
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    border: none
+    border-right: 1px solid rgba(81, 11, 186, 0.1)
+    border-left: 1px solid rgba(81, 11, 186, 0.1)
+    height: 80px
+    width: 70px
+    &__line
+      display: block
+      width: 25px
+      height: 4px
+      background-color: #14a0a3
+      margin: 3px 0
+
+.logo
+  &_text
+    display: block
+    margin-bottom: 5px
+    font-size: 18px
+    text-transform: uppercase
+    +bold
+  &_description
+    display: block
+    font-size: 14px
+    color: $text-color-light
+@media (max-width: 991px)
+  .navbar
+    &_mobile, &_landline
+      display: none
+@media (max-width: 576px)
+  .logo
+     display: none
+  .menu
+    top: 60px
+    transform: translateY(0)
+    &-button
+      height: 60px
+    &__nav
+      flex-direction: column
+    &__link
+      margin-bottom: 20px
+
+
+
+
+
